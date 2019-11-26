@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="一分耕耘一分收获">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="lhz">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="类型检测"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="一分耕耘一分收获" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="恋空一译"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>类型检测 - 恋空一译</title>
+
+    <!-- Tachyons Core CSS -->
+    <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+
+<body>
+
+<!-- Main Content -->
+<!-- Banner -->
+<!-- Banner -->
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+    
+    <nav class="db dt-l w-100 mw8 center border-box pv3">
+        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="恋空一译">
+            <img src="/images/avatar.jpg" class="dib h3" alt="恋空一译">
+        </a>
+        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/" 
+                    title="Home">
+                    Home
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/archives" 
+                    title="Archives">
+                    Archives
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/tags" 
+                    title="Tags">
+                    Tags
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/categories" 
+                    title="Categories">
+                    Categories
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/about.html" 
+                    title="About">
+                    About
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/contact.html" 
+                    title="Contact">
+                    Contact
+                </a>
+            
+        </div>
+    </nav>
+
+    <!-- Title -->
+    <div class="w-100 mw8 center vh-40 dt">
+        <div class="dtc v-mid white">
+            <h1 class="f1-l f2-m tc tc-m tl-ns">类型检测</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2018-10-01</p>
+        </div>
+    </div>
+
+    <!-- Icon -->
+    <div class="relative w-100 mw8 center white dn dn-m db-ns">
+        <i class="header-icon fa fa fa-file-code-o"></i>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/JavaScript/">#JavaScript</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <p><a href="https://github.com/mqyqingfeng/Blog/issues/28" target="_blank" rel="noopener">JavaScript专题之类型判断(上)</a><br><a href="https://github.com/jquery/jquery/blob/ac9e3016645078e1e42120822cfb2076151c8cbe/src/core.js#L269" target="_blank" rel="noopener">jQuery type源码</a><br><a href="https://segmentfault.com/a/1190000013041329" target="_blank" rel="noopener">参考</a></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="built_in">arguments</span>); <span class="comment">// [object Arguments]</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(location) <span class="comment">// "[object Location]"</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(history) <span class="comment">// "[object History]"</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> class2type = &#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 生成class2type映射</span></span><br><span class="line"><span class="string">"Boolean Number String Function Array Date RegExp Object Error"</span>.split(<span class="string">" "</span>).map(<span class="function"><span class="keyword">function</span>(<span class="params">item, index</span>) </span>&#123;</span><br><span class="line">    class2type[<span class="string">"[object "</span> + item + <span class="string">"]"</span>] = item.toLowerCase();</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">type</span>(<span class="params">obj</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 在 IE6 中，null 和 undefined 会被 Object.prototype.toString 识别成 [object Object]！</span></span><br><span class="line">    <span class="keyword">if</span> (obj == <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> obj + <span class="string">""</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">typeof</span> obj === <span class="string">"object"</span> || <span class="keyword">typeof</span> obj === <span class="string">"function"</span> ?</span><br><span class="line">        class2type[<span class="built_in">Object</span>.prototype.toString.call(obj)] || <span class="string">"object"</span> :</span><br><span class="line">        <span class="keyword">typeof</span> obj;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><a href="#typeof"><code>typeof</code></a></li>
+<li><a href="#instanceof"><code>instanceof</code>：检测引用数据类型</a></li>
+<li><a href="#constructor"><code>constructor</code>：似乎完全可以应对基本数据类型和引用数据类型，都能检测出数据类型</a></li>
+<li><a href="#toString"><code>Object.prototype.toString</code>：终极数据检测方式</a></li>
+</ul>
+<blockquote>
+<p>假设 Object.prototpye.toString()是未被修改过的原生版本<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Typeof</span> </span>&#123;</span><br><span class="line">  isNull(o) &#123; <span class="comment">//是否为null</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.call(o).slice(<span class="number">8</span>, <span class="number">-1</span>) === <span class="string">'Null'</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  isUndefined(o) &#123; <span class="comment">//是否undefined</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.call(o).slice(<span class="number">8</span>, <span class="number">-1</span>) === <span class="string">'Undefined'</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  isSymbol(o) &#123; <span class="comment">//是否Symbol函数</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.call(o).slice(<span class="number">8</span>, <span class="number">-1</span>) === <span class="string">'Symbol'</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  isPromise(o) &#123; <span class="comment">//是否Promise对象</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.call(o).slice(<span class="number">8</span>, <span class="number">-1</span>) === <span class="string">'Promise'</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  isSet(o) &#123; <span class="comment">//是否Set对象</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.call(o).slice(<span class="number">8</span>, <span class="number">-1</span>) === <span class="string">'Set'</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  isFalse(o) &#123;</span><br><span class="line">    <span class="keyword">if</span> (!o || o === <span class="string">'null'</span> || o === <span class="string">'undefined'</span> || o === <span class="string">'false'</span> || o === <span class="string">'NaN'</span>) <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  isTrue(o) &#123;</span><br><span class="line">    <span class="keyword">return</span> !<span class="keyword">this</span>.isFalse(o)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h1 id="标准内置对象的分类"><a href="#标准内置对象的分类" class="headerlink" title="标准内置对象的分类"></a>标准内置对象的分类</h1><ul>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects" target="_blank" rel="noopener"> JavaScript 中所有的标准的内置对象</a></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这些全局属性返回一个简单值，这些值没有自己的属性和方法。</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>值属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Infinity</td>
+<td>一个数值，表示无穷大</td>
+</tr>
+<tr>
+<td>NaN</td>
+<td>不是一个数字（Not-A-Number）</td>
+</tr>
+<tr>
+<td>undefined</td>
+<td>原始值undefined。它是一个JavaScript的 原始数据类型</td>
+</tr>
+<tr>
+<td>null字面量</td>
+<td>特指对象的值未设置</td>
+</tr>
+</tbody>
+</table>
+<p>全局函数可以直接调用，不需要在调用时指定所属对象，执行结束后会将结果直接返回给调用者。</p>
+<table>
+<thead>
+<tr>
+<th>函数属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eval()</td>
+<td></td>
+</tr>
+<tr>
+<td>isFinite()</td>
+<td></td>
+</tr>
+<tr>
+<td>isNaN()</td>
+<td></td>
+</tr>
+<tr>
+<td>parseFloat()</td>
+<td></td>
+</tr>
+<tr>
+<td>parseInt()</td>
+<td></td>
+</tr>
+<tr>
+<td>decodeURI()</td>
+<td></td>
+</tr>
+<tr>
+<td>decodeURIComponent()</td>
+<td></td>
+</tr>
+<tr>
+<td>encodeURI()</td>
+<td></td>
+</tr>
+<tr>
+<td>encodeURIComponent()</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>顾名思义，基本对象是定义或使用其他对象的基础。基本对象包括一般对象、函数对象和错误对象。</p>
+<table>
+<thead>
+<tr>
+<th>基本对象</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Object</td>
+<td></td>
+</tr>
+<tr>
+<td>Function</td>
+<td></td>
+</tr>
+<tr>
+<td>Boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>Symbol</td>
+<td></td>
+</tr>
+<tr>
+<td>Error</td>
+<td></td>
+</tr>
+<tr>
+<td>EvalError</td>
+<td></td>
+</tr>
+<tr>
+<td>InternalError</td>
+<td></td>
+</tr>
+<tr>
+<td>RangeError</td>
+<td></td>
+</tr>
+<tr>
+<td>ReferenceError</td>
+<td>(引用错误)对象代表当一个不存在的变量被引用时发生的错误</td>
+</tr>
+<tr>
+<td>SyntaxError</td>
+<td></td>
+</tr>
+<tr>
+<td>TypeError</td>
+<td></td>
+</tr>
+<tr>
+<td>URIError</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>用来表示数字、日期和执行数学计算的对象。<br>数字和日期对象节 | 描述<br>—|—<br>Number<br>Math<br>Date</p>
+<p>用来表示和操作字符串的对象。</p>
+<table>
+<thead>
+<tr>
+<th>字符串</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>String<br>RegExp</p>
+<p>这些对象表示按照索引值来排序的数据集合，包括数组和类型数组，以及类数组结构的对象。<br>可索引的集合对象 | 描述<br>—|—<br>Array |<br>… | </p>
+<p>这些集合对象在存储数据时会使用到键，支持按照插入顺序来迭代元素。<br>使用键的集合对象 |<br>—|—<br>Map |<br>Set |<br>WeakMap |<br>WeakSet |</p>
+<p>这些对象用来表示和操作结构化的缓冲区数据，或使用 JSON （JavaScript Object Notation）编码的数据。<br>结构化数据 |<br>—|—<br>ArrayBuffer<br>DataView<br>JSON</p>
+<table>
+<thead>
+<tr>
+<th>控制抽象对象</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Promise</td>
+<td></td>
+</tr>
+<tr>
+<td>Generator</td>
+<td></td>
+</tr>
+<tr>
+<td>GeneratorFunction</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>反射</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Promise</td>
+<td></td>
+</tr>
+<tr>
+<td>Reflect</td>
+<td></td>
+</tr>
+<tr>
+<td>Proxy</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>其他<br>arguments</p>
+<h2 id="类型检测"><a href="#类型检测" class="headerlink" title="类型检测"></a>类型检测</h2><h3 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a>typeof</h3><blockquote>
+<p>一般用于检测原始数据类型，引用数据类型无法具体的检测出来</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">console.log(typeof &quot;&quot;); //string</span><br><span class="line">console.log(typeof 1); //number</span><br><span class="line">console.log(typeof true); //boolean</span><br><span class="line">console.log(typeof null); //object</span><br><span class="line">console.log(typeof undefined); //undefined</span><br><span class="line">console.log(typeof []); //object</span><br><span class="line">console.log(typeof function() &#123;&#125;); //function</span><br><span class="line">console.log(typeof &#123;&#125;); //object</span><br></pre></td></tr></table></figure>
+<p>其实null是js设计的一个败笔，早期准备更改null的类型为null，由于当时已经有大量网站使用了null，如果更改，将导致很多网站的逻辑出现漏洞问题，就没有更改过来，于是一直遗留到现在。</p>
+<h3 id="instanceof"><a href="#instanceof" class="headerlink" title="instanceof"></a>instanceof</h3><blockquote>
+<p>检测引用数据类型</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">console.log(&quot;1&quot; instanceof String);  //false</span><br><span class="line">console.log(1 instanceof Number);  //false</span><br><span class="line">console.log(true instanceof Boolean);  //false</span><br><span class="line">console.log([] instanceof Array);  //true</span><br><span class="line">console.log(function() &#123;&#125; instanceof Function);  //true</span><br><span class="line">console.log(&#123;&#125; instanceof Object);  //true</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>可以看到前三个都是以对象字面量创建的基本数据类型，但是却不是所属类的实例，这个就有点怪了。后面三个是引用数据类型，可以得到正确的结果。如果我们通过new关键字去创建基本数据类型，你会发现，这时就会输出true,如下:</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">console.log(new String(&quot;1&quot;) instanceof String); //true</span><br><span class="line">console.log(new Number(1) instanceof Number); //true</span><br><span class="line">console.log(new Boolean(true) instanceof Boolean); //true</span><br><span class="line">console.log([] instanceof Array); //true</span><br><span class="line">console.log(function() &#123;&#125; instanceof Function); //true</span><br><span class="line">console.log(&#123;&#125; instanceof Object); //true</span><br></pre></td></tr></table></figure>
+<h3 id="constructor-NaN"><a href="#constructor-NaN" class="headerlink" title="constructor"></a>constructor</h3><blockquote>
+<p>似乎完全可以应对基本数据类型和引用数据类型，都能检测出数据类型</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">console.log((&quot;1&quot;).constructor === String); //true</span><br><span class="line">console.log((1).constructor === Number); //true</span><br><span class="line">console.log((true).constructor === Boolean); //true</span><br><span class="line">console.log(([]).constructor === Array); //true</span><br><span class="line">console.log((function() &#123;&#125;).constructor === Function); //true</span><br><span class="line">console.log((&#123;&#125;).constructor === Object); //true</span><br></pre></td></tr></table></figure>
+<p>事实上并不是如此，来看看为什么：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function Fn()&#123;&#125;;</span><br><span class="line">Fn.prototype=new Array();</span><br><span class="line">var f=new Fn();</span><br><span class="line"></span><br><span class="line">console.log(f.constructor===Fn);  //false</span><br><span class="line">console.log(f.constructor===Array);  //true</span><br></pre></td></tr></table></figure>
+<p>声明了一个构造函数，并且把他的原型指向了Array的原型，所以这种情况下，<code>constructor</code>也显得力不从心了。</p>
+<h3 id="toString-NaN"><a href="#toString-NaN" class="headerlink" title="toString"></a>toString</h3><blockquote>
+<p>Object.prototype.toString终极数据检测方式</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var a = Object.prototype.toString;</span><br><span class="line"></span><br><span class="line">console.log(a.call(&quot;aaa&quot;));  //[object String]</span><br><span class="line">console.log(a.call(1));  //[object Number]</span><br><span class="line">console.log(a.call(true));  //[object Boolean]</span><br><span class="line">console.log(a.call(null));  //[object Null]</span><br><span class="line">console.log(a.call(undefined));  //[object Undefined]</span><br><span class="line">console.log(a.call([]));  //[object Array]</span><br><span class="line">console.log(a.call(function() &#123;&#125;));  //[object Function]</span><br><span class="line">console.log(a.call(&#123;&#125;));  //[object Object]</span><br></pre></td></tr></table></figure>
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/JavaScript/">#JavaScript</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+
+
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+            <img src="/images/timg.jpg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="lhz">
+        </div>
+        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
+            My name is lhz  and this is my blog.
+        </div>
+    </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+                        <div class="mt5 tc tl-l">
+    <h3>分类</h3>
+    
+        <p>
+            <a href="/categories/JavaScript/">JavaScript</a>
+        </p>
+    
+</div>
+
+
+                        <hr class="dn-l mw4 black-50 mt5" />
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>近期文章</h3>
+    
+        <p>
+            <a href="/2019/01/13/todo/">Todo</a>
+        </p>
+    
+        <p>
+            <a href="/2018/12/17/reflow-repaint/">了解回流和重绘</a>
+        </p>
+    
+        <p>
+            <a href="/2018/12/05/common-tool/">常用工具</a>
+        </p>
+    
+        <p>
+            <a href="/2018/11/15/javascript-closure/">闭包</a>
+        </p>
+    
+        <p>
+            <a href="/2018/11/10/html5/">HTML5</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="bg-1 ph2 ph5-ns pv5">
+        <div class="mv8">
+            <div class="center tc">
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://github.com/mrlhz" target="_blank">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </div>
+                
+            </div>
+            <div class="f6 f5-ns center tc white pt5 fw3">
+                @study. All right reserved | Design & <a class="link dim white" href="https://hexo.io/zh-cn/">Hexo</a> <a class="link dim white" href="https://mrlhz.com/">lhz</a>
+            </div>
+        </div>
+    </div>
+
+<!-- After Footer -->
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

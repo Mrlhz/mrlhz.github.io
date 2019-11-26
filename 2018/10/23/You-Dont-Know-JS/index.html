@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="一分耕耘一分收获">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="lhz">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="You-Dont-Know-JS"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="一分耕耘一分收获" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="恋空一译"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>You-Dont-Know-JS - 恋空一译</title>
+
+    <!-- Tachyons Core CSS -->
+    <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+
+<body>
+
+<!-- Main Content -->
+<!-- Banner -->
+<!-- Banner -->
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+    
+    <nav class="db dt-l w-100 mw8 center border-box pv3">
+        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="恋空一译">
+            <img src="/images/avatar.jpg" class="dib h3" alt="恋空一译">
+        </a>
+        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/" 
+                    title="Home">
+                    Home
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/archives" 
+                    title="Archives">
+                    Archives
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/tags" 
+                    title="Tags">
+                    Tags
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/categories" 
+                    title="Categories">
+                    Categories
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/about.html" 
+                    title="About">
+                    About
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/contact.html" 
+                    title="Contact">
+                    Contact
+                </a>
+            
+        </div>
+    </nav>
+
+    <!-- Title -->
+    <div class="w-100 mw8 center vh-40 dt">
+        <div class="dtc v-mid white">
+            <h1 class="f1-l f2-m tc tc-m tl-ns">You-Dont-Know-JS</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2018-10-23</p>
+        </div>
+    </div>
+
+    <!-- Icon -->
+    <div class="relative w-100 mw8 center white dn dn-m db-ns">
+        <i class="header-icon fa fa-file-text-o"></i>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/JavaScript/">#JavaScript</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <ul>
+<li><a href="https://github.com/getify/You-Dont-Know-JS" target="_blank" rel="noopener">You-Dont-Know-JS</a></li>
+</ul>
+<h2 id="list"><a href="#list" class="headerlink" title="list"></a>list</h2><ul>
+<li><a href="#scope">词法作用域</a></li>
+<li><a href="#scope">函数作用域</a></li>
+<li><a href="#promotion">提升</a></li>
+<li><a href="#closure">闭包</a></li>
+<li><a href="#this">this</a></li>
+</ul>
+<h3 id="scope"><a href="#scope" class="headerlink" title="scope"></a>scope</h3><details><br><summary>this</summary><br><br><code>var a = 2</code>分解<br>- 遇到var a,编译器会询问作用域是否已经有一个该名称的变量存在于同一个作用域的集合中。如果是,编译器会忽略该声明,继续进行编译;否则它会要求作用域在当前作用域的集合中声明一个新的变量,并命名为a。<br>- 接下来编译器会为引擎生成运行时所需的代码,这些代码被用来处理a = 2这个赋值操作。引擎运行时会首先询问作用域,在当前的作用域集合中是否存在一个叫作 a 的 变量。如果是,引擎就会使用这个变量;如果否,引擎会继续查找该变量(查看 1.3 节)。<br>如果引擎最终找到了 a 变量,就会将 2 赋值给它。否则引擎就会举手示意并抛出一个异常!<br><br>&gt;总结:变量的赋值操作会执行两个动作,首先编译器会在当前作用域中声明一个变量(如果之前没有声明过),然后在运行时引擎会在作用域中查找该变量,如果能够找到就会对它赋值。<br><br><code>LHS | RHS查询</code><br>LHS 查询则是试图找到变量的容器本身,从而可以对其赋值。从这个角度说,RHS 并不是真正意义上的“赋值操作的右侧”,更准确地说是“非左侧”。<br><br>可以将RHS理解成retrieve his source value(取到它的源值),这意味着“得到某某的值”<br><br>&gt;LHS 和 RHS 的含义是“赋值操作的左侧或右侧”并不一定意味着就是“= 赋值操作符的左侧或右侧”。赋值操作还有其他几种形式,因此在概念上最 好将其理解为“赋值操作的目标是谁(LHS)”以及“谁是赋值操作的源头<br>(RHS)”。<br><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log( a );</span><br></pre></td></tr></table></figure><br><br>其中对 a 的引用是一个 RHS 引用,因为这里 a 并没有赋予任何值。相应地,需要查找并取<br>得 a 的值,这样才能将值传递给 console.log(..)。<br>—<br>相比之下,例如:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a=<span class="number">2</span>;</span><br></pre></td></tr></table></figure><br><br>这里对 a 的引用则是 LHS 引用,因为实际上我们并不关心当前的值是什么,只是想要为 =<br>2 这个赋值操作找到一个目标。<br>—<br>既有 LHS 也有 RHS 引用<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">a</span>) </span>&#123; </span><br><span class="line">  <span class="built_in">console</span>.log( a ); <span class="comment">// 2</span></span><br><span class="line">&#125;</span><br><span class="line">foo( <span class="number">2</span> );</span><br></pre></td></tr></table></figure><br><br>&gt;隐式的 a=2 操作发生在 2 被当作参数传递给 foo(..) 函数时,2 会被分配给参数 a。为了给参数 a(隐式地)分配值,需要进行一次 LHS 查询。<br><br>&gt;最后一行 foo(..) 函数的调用需要对 foo 进行 RHS 引用,意味着“去找到 foo 的值,并把 它给我”。并且 (..) 意味着 foo 的值需要被执行,因此它最好真的是一个函数类型的值!<br><br><br><code>小结</code><br>作用域是一套规则,用于确定在何处以及如何查找变量(标识符)。如果查找的目的是对变量进行赋值,那么就会使用 LHS查询;如果目的是获取变量的值,就会使用 RHS查询。<br><br></details>
+
+
+<h3 id="scope-1"><a href="#scope-1" class="headerlink" title="scope"></a>scope</h3><details><br><summary>函数中的作用域</summary><br><br>3.1　函数中的作用域<br>&gt;函数作用域的含义是指，属于这个函数的全部变量都可以在整个函数的范围内使用及复<br>用（事实上在嵌套的作用域中也可以使用）<br><br>3.2　隐藏内部实现<br>&gt; 最小授权或最小暴露原则。这个原则是指在软件设计中，应该最小限度地暴露必要内容，而将其他内容都“隐藏”起来，比如某个模块或对象的 API 设计<br><br>3.3　函数作用域<br>&gt;区分函数声明和表达式最简单的方法是看 function 关键字出现在声明中的位<br>置（不仅仅是一行代码，而是整个声明中的位置） 。如果 function 是声明中<br>的第一个词，那么就是一个函数声明，否则就是一个函数表达式<br><br>3.3.1　匿名和具名<br>匿名函数表达式<br>1. 匿名函数在栈追踪中不会显示出有意义的函数名，使得调试很困难<br>2. 如果没有函数名，当函数需要引用自身时只能使用已经过期的 <code>arguments.callee</code>引用，比如在递归中。另一个函数需要引用自身的例子，是在事件触发后事件监听器需要解绑自身。<br>3. 匿名函数省略了对于代码可读性 / 可理解性很重要的函数名。一个描述性的名称可以让<br>代码不言自明<br>&gt;行内函数表达式非常强大且有用,始终给函数表达式命名是一个最佳实践<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">setTimeout( <span class="function"><span class="keyword">function</span> <span class="title">timeoutHandler</span>(<span class="params"></span>) </span>&#123; <span class="comment">// &lt;-- 快看，我有名字了！ </span></span><br><span class="line">    <span class="built_in">console</span>.log( <span class="string">"I waited 1 second!"</span> ); </span><br><span class="line">&#125;, <span class="number">1000</span> );</span><br></pre></td></tr></table></figure><br><br>3.3.2　立即执行函数表达式<br>&gt;IIFE，代表立即执行函数表达式（Immediately Invoked Function Expression）<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">2</span>; </span><br><span class="line"> </span><br><span class="line">(<span class="function"><span class="keyword">function</span> <span class="title">IIFE</span>(<span class="params"> global </span>) </span>&#123; </span><br><span class="line">    <span class="keyword">var</span> a = <span class="number">3</span>; </span><br><span class="line">    <span class="built_in">console</span>.log( a ); <span class="comment">// 3 </span></span><br><span class="line">    <span class="built_in">console</span>.log( global.a ); <span class="comment">// 2 </span></span><br><span class="line">&#125;)( <span class="built_in">window</span> ); </span><br><span class="line"> </span><br><span class="line"><span class="built_in">console</span>.log( a ); <span class="comment">// 2</span></span><br></pre></td></tr></table></figure><br><br>3.4　块作用域<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> foo = <span class="literal">true</span>; </span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> (foo) &#123; </span><br><span class="line">    <span class="keyword">var</span> bar = foo * <span class="number">2</span>; <span class="comment">// 属于外部作用域</span></span><br><span class="line">    bar = something( bar );  </span><br><span class="line">    <span class="built_in">console</span>.log( bar ); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br><br>3.4.2　try/catch<br>&gt; JavaScript 的 ES3 规范中规定 try/catch 的 catch 分句会创建一个块作<br>用域，其中声明的变量仅在 catch 内部有效<br><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span> &#123; </span><br><span class="line">    <span class="literal">undefined</span>(); <span class="comment">// 执行一个非法操作来强制制造一个异常 </span></span><br><span class="line">&#125;  </span><br><span class="line"><span class="keyword">catch</span> (err) &#123; </span><br><span class="line">    <span class="built_in">console</span>.log( err ); <span class="comment">// 能够正常执行！ </span></span><br><span class="line">&#125; </span><br><span class="line"> </span><br><span class="line"><span class="built_in">console</span>.log( err ); <span class="comment">// ReferenceError: err not found</span></span><br></pre></td></tr></table></figure><br><br>3.5　小结<br>&gt;函数是 JavaScript 中最常见的作用域单元。本质上，声明在一个函数内部的变量或函数会<br>在所处的作用域中“隐藏”起来，这是有意为之的良好软件的设计原则。<br>但函数不是唯一的作用域单元。块作用域指的是变量和函数不仅可以属于所处的作用域，<br>也可以属于某个代码块（通常指 { .. } 内部） 。<br>从 ES3 开始，try/catch 结构在 catch 分句中具有块作用域。<br>在 ES6 中引入了 let 关键字（var 关键字的表亲） ，用来在任意代码块中声明变量。if<br>(..) { let a = 2; } 会声明一个劫持了 if 的 { .. } 块的变量，并且将变量添加到这个块<br>中。<br>有些人认为块作用域不应该完全作为函数作用域的替代方案。两种功能应该同时存在，开<br>发者可以并且也应该根据需要选择使用何种作用域，创造可读、可维护的优良代码。<br><br></details>
+
+<h3 id="promotion"><a href="#promotion" class="headerlink" title="promotion"></a>promotion</h3><details><br><summary>提升</summary><br><br>4.1　先有鸡还是先有蛋<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">2</span>; </span><br><span class="line"> </span><br><span class="line"><span class="keyword">var</span> a; </span><br><span class="line"> </span><br><span class="line"><span class="built_in">console</span>.log( a ); <span class="comment">// 2</span></span><br><span class="line"><span class="comment">// 代码片段会以如下形式进行处理</span></span><br><span class="line"><span class="keyword">var</span> a; </span><br><span class="line"> </span><br><span class="line">a = <span class="number">2</span>; </span><br><span class="line"> </span><br><span class="line"><span class="built_in">console</span>.log( a );</span><br></pre></td></tr></table></figure><br><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log( a ); </span><br><span class="line"> </span><br><span class="line"><span class="keyword">var</span> a = <span class="number">2</span>; <span class="comment">// undefined</span></span><br><span class="line"><span class="comment">// 代码片段实际是按照以下流程处理的：</span></span><br><span class="line"><span class="keyword">var</span> a; </span><br><span class="line"> </span><br><span class="line"><span class="built_in">console</span>.log( a ); </span><br><span class="line"> </span><br><span class="line">a = <span class="number">2</span>;</span><br></pre></td></tr></table></figure><br><br>4.2　编译器再度来袭<br>&gt;这个过程就好像变量和函数声明从它们在代码中出现的位置被“移动”到了最上面。这个过程就叫作提升<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">foo(); </span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123; </span><br><span class="line">    <span class="built_in">console</span>.log( a ); <span class="comment">// undefined </span></span><br><span class="line">    <span class="keyword">var</span> a = <span class="number">2</span>; </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 理解为下面的形式</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123; </span><br><span class="line">    <span class="keyword">var</span> a; </span><br><span class="line"> </span><br><span class="line">    <span class="built_in">console</span>.log( a ); <span class="comment">// undefined </span></span><br><span class="line"> </span><br><span class="line">    a = <span class="number">2</span>;   </span><br><span class="line">&#125; </span><br><span class="line"> </span><br><span class="line">foo();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 可以看到，函数声明会被提升，但是函数表达式却不会被提升。</span></span><br><span class="line">foo(); <span class="comment">// 不是 ReferenceError, 而是 TypeError! </span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">var</span> foo = <span class="function"><span class="keyword">function</span> <span class="title">bar</span>(<span class="params"></span>) </span>&#123; </span><br><span class="line">    <span class="comment">// ... </span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><br><br>4.4  小结<br>&gt;我们习惯将 var a = 2; 看作一个声明，而实际上 JavaScript 引擎并不这么认为。它将 var a<br>和 a = 2 当作两个单独的声明，第一个是编译阶段的任务，而第二个则是执行阶段的任务。<br>这意味着无论作用域中的声明出现在什么地方，都将在代码本身被执行前首先进行处理。<br>可以将这个过程形象地想象成所有的声明（变量和函数）都会被“移动”到各自作用域的<br>最顶端，这个过程被称为提升。<br><br>&gt;声明本身会被提升，而包括函数表达式的赋值在内的赋值操作并不会提升<br><br></details>
+
+<h3 id="closure"><a href="#closure" class="headerlink" title="closure"></a>closure</h3><details><br><summary>作用域闭包</summary><br><br><code>如果将函数（访问它们各自的词法作用域）当作第一级的值类型并到处传递，你就会看到闭包在这些函数中的应用。
+在定时器、事件监听器、Ajax 请求、跨窗口通信、Web Workers 
+或者任何其他的异步（或者同步）任务中，只要使用了回调函数，实际上就是在使用闭包。</code><br><br>5.4　循环和闭包<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">1</span>; i&lt;=<span class="number">5</span>; i++) &#123; </span><br><span class="line">    (<span class="function"><span class="keyword">function</span>(<span class="params">j</span>) </span>&#123; </span><br><span class="line">        setTimeout( <span class="function"><span class="keyword">function</span> <span class="title">timer</span>(<span class="params"></span>) </span>&#123; </span><br><span class="line">            <span class="built_in">console</span>.log( j ); </span><br><span class="line">        &#125;, j*<span class="number">1000</span> ); </span><br><span class="line">    &#125;)( i ); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br><br>&gt;在迭代内使用 IIFE 会为每个迭代都生成一个新的作用域，使得延迟函数的回调可以将新的作用域封闭在每个迭代内部，每个迭代中都会含有一个具有正确值的变量供我们访问。<br><br>5.5　模块<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">CoolModule</span>(<span class="params"></span>) </span>&#123; </span><br><span class="line">    <span class="keyword">var</span> something = <span class="string">"cool"</span>;</span><br><span class="line">    <span class="keyword">var</span> another = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]; </span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">doSomething</span>(<span class="params"></span>) </span>&#123;  </span><br><span class="line">        <span class="built_in">console</span>.log( something ); </span><br><span class="line">    &#125; </span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">doAnother</span>(<span class="params"></span>) </span>&#123; </span><br><span class="line">        <span class="built_in">console</span>.log( another.join( <span class="string">" ! "</span> ) ); </span><br><span class="line">    &#125; </span><br><span class="line"> </span><br><span class="line">    <span class="keyword">return</span> &#123; </span><br><span class="line">        doSomething: doSomething,  </span><br><span class="line">        doAnother: doAnother </span><br><span class="line">    &#125;; </span><br><span class="line">&#125; </span><br><span class="line"> </span><br><span class="line"><span class="keyword">var</span> foo = CoolModule();  </span><br><span class="line"> </span><br><span class="line">foo.doSomething(); <span class="comment">// cool </span></span><br><span class="line">foo.doAnother(); <span class="comment">// 1 ! 2 ! 3</span></span><br></pre></td></tr></table></figure><br><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 改进来实现单例模式：</span></span><br><span class="line"><span class="keyword">var</span> foo = (<span class="function"><span class="keyword">function</span> <span class="title">CoolModule</span>(<span class="params"></span>) </span>&#123;  </span><br><span class="line">    <span class="keyword">var</span> something = <span class="string">"cool"</span>; </span><br><span class="line">    <span class="keyword">var</span> another = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]; </span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">doSomething</span>(<span class="params"></span>) </span>&#123;  </span><br><span class="line">        <span class="built_in">console</span>.log( something ); </span><br><span class="line">    &#125; </span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">doAnother</span>(<span class="params"></span>) </span>&#123; </span><br><span class="line">        <span class="built_in">console</span>.log( another.join( <span class="string">" ! "</span> ) ); </span><br><span class="line">    &#125; </span><br><span class="line"> </span><br><span class="line">    <span class="keyword">return</span> &#123; </span><br><span class="line">        doSomething: doSomething,  </span><br><span class="line">        doAnother: doAnother </span><br><span class="line">    &#125;; </span><br><span class="line">&#125;)(); </span><br><span class="line"> </span><br><span class="line">foo.doSomething(); <span class="comment">// cool  </span></span><br><span class="line">foo.doAnother(); <span class="comment">// 1 ! 2 ! 3</span></span><br></pre></td></tr></table></figure><br><br></details>
+
+<h3 id="this"><a href="#this" class="headerlink" title="this"></a>this</h3><details><br><summary>this全面解析</summary><br><br><br>2.2 this全面解析<br><br>2.2.1　默认绑定<br>&gt;this 的默认绑定，this 指向全局对象<br><br>&gt;如果使用严格模式（strict mode） ，那么全局对象将无法使用默认绑定，因此 this 会绑定到 undefined<br><br>2.2.2　隐式绑定<br><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;  </span><br><span class="line">    <span class="built_in">console</span>.log( <span class="keyword">this</span>.a );</span><br><span class="line">&#125; </span><br><span class="line"> </span><br><span class="line"><span class="keyword">var</span> obj = &#123;  </span><br><span class="line">    a: <span class="number">2</span>, </span><br><span class="line">    foo: foo  </span><br><span class="line">&#125;; </span><br><span class="line"> </span><br><span class="line">obj.foo(); <span class="comment">// 2</span></span><br></pre></td></tr></table></figure><br><br>隐式丢失<br><code>一个最常见的 this 绑定问题就是被隐式绑定的函数会丢失绑定对象，也就是说它会应用默认绑定，从而把 this 绑定到全局对象或者 undefined 上，取决于是否是严格模式</code><br><br>显式绑定<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;  </span><br><span class="line">    <span class="built_in">console</span>.log( <span class="keyword">this</span>.a ); </span><br><span class="line">&#125; </span><br><span class="line"> </span><br><span class="line"><span class="keyword">var</span> obj = &#123;  </span><br><span class="line">    a:<span class="number">2</span> </span><br><span class="line">&#125;; </span><br><span class="line"> </span><br><span class="line">foo.call( obj ); <span class="comment">// 2</span></span><br></pre></td></tr></table></figure><br><br>&gt;通过 <code>foo.call(..)</code>，我们可以在调用 <code>foo</code> 时强制把它的 <code>this</code> 绑定到 <code>obj</code> 上。<br>如果你传入了一个原始值（字符串类型、布尔类型或者数字类型）来当作 this 的绑定对象，这个原始值会被转换成它的对象形式（也就是 <code>new String(..)</code>、<code>new Boolean(..)</code> 或者<br><code>new Number(..)</code>） 。这通常被称为“装箱”<br><br>硬绑定<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;  </span><br><span class="line">    <span class="built_in">console</span>.log( <span class="keyword">this</span>.a ); </span><br><span class="line">&#125; </span><br><span class="line"> </span><br><span class="line"><span class="keyword">var</span> obj = &#123;  </span><br><span class="line">    a:<span class="number">2</span> </span><br><span class="line">&#125;; </span><br><span class="line"> </span><br><span class="line"><span class="keyword">var</span> bar = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; </span><br><span class="line">    foo.call( obj ); </span><br><span class="line">&#125;; </span><br><span class="line"> </span><br><span class="line">bar(); <span class="comment">// 2 </span></span><br><span class="line">setTimeout( bar, <span class="number">100</span> ); <span class="comment">// 2 </span></span><br><span class="line"> </span><br><span class="line"><span class="comment">// 硬绑定的 bar 不可能再修改它的 this </span></span><br><span class="line">bar.call( <span class="built_in">window</span> ); <span class="comment">// 2</span></span><br></pre></td></tr></table></figure><br><br>- <code>call, apply, bind</code><br><br>API调用的“上下文”<br><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">el</span>) </span>&#123;  </span><br><span class="line">    <span class="built_in">console</span>.log( el, <span class="keyword">this</span>.id ); </span><br><span class="line">&#125; </span><br><span class="line"> </span><br><span class="line"><span class="keyword">var</span> obj = &#123; </span><br><span class="line">    id: <span class="string">"awesome"</span> </span><br><span class="line">&#125;; </span><br><span class="line"> </span><br><span class="line"><span class="comment">// 调用 foo(..) 时把 this 绑定到 obj </span></span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>].forEach( foo, obj ); </span><br><span class="line"><span class="comment">// 1 awesome 2 awesome 3 awesome</span></span><br></pre></td></tr></table></figure><br><br>&gt;这些函数实际上就是通过 call(..) 或者 apply(..)实现了显式绑定，这样你可以少些一些代码<br><br><br>2.2.4　new绑定<br><code>使用 new 来调用函数，或者说发生构造函数调用时，会自动执行下面的操作。</code><br><br>1. 创建（或者说构造）一个全新的对象。<br>2. 这个新对象会被执行 [[ 原型 ]] 连接。<br>3. 这个新对象会绑定到函数调用的 this。<br>4. 如果函数没有返回其他对象，那么 new 表达式中的函数调用会自动返回这个新对象。<br><br><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">a</span>) </span>&#123;  </span><br><span class="line">    <span class="keyword">this</span>.a = a; </span><br><span class="line">&#125;  </span><br><span class="line"> </span><br><span class="line"><span class="keyword">var</span> bar = <span class="keyword">new</span> foo(<span class="number">2</span>); </span><br><span class="line"><span class="built_in">console</span>.log( bar.a ); <span class="comment">// 2</span></span><br></pre></td></tr></table></figure><br><br><code>使用 new 来调用 foo(..) 时，我们会构造一个新对象并把它绑定到 foo(..) 调用中的 this上。new 是最后一种可以影响函数调用时 this 绑定行为的方法，我们称之为 new 绑定</code><br><br></details>
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/JavaScript/">#JavaScript</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+
+
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+            <img src="/images/timg.jpg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="lhz">
+        </div>
+        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
+            My name is lhz  and this is my blog.
+        </div>
+    </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+                        <div class="mt5 tc tl-l">
+    <h3>分类</h3>
+    
+        <p>
+            <a href="/categories/JavaScript/">JavaScript</a>
+        </p>
+    
+</div>
+
+
+                        <hr class="dn-l mw4 black-50 mt5" />
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>近期文章</h3>
+    
+        <p>
+            <a href="/2019/01/13/todo/">Todo</a>
+        </p>
+    
+        <p>
+            <a href="/2018/12/17/reflow-repaint/">了解回流和重绘</a>
+        </p>
+    
+        <p>
+            <a href="/2018/12/05/common-tool/">常用工具</a>
+        </p>
+    
+        <p>
+            <a href="/2018/11/15/javascript-closure/">闭包</a>
+        </p>
+    
+        <p>
+            <a href="/2018/11/10/html5/">HTML5</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="bg-1 ph2 ph5-ns pv5">
+        <div class="mv8">
+            <div class="center tc">
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://github.com/mrlhz" target="_blank">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </div>
+                
+            </div>
+            <div class="f6 f5-ns center tc white pt5 fw3">
+                @study. All right reserved | Design & <a class="link dim white" href="https://hexo.io/zh-cn/">Hexo</a> <a class="link dim white" href="https://mrlhz.com/">lhz</a>
+            </div>
+        </div>
+    </div>
+
+<!-- After Footer -->
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

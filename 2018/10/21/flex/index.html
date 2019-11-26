@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="一分耕耘一分收获">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="lhz">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Flex 布局"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="一分耕耘一分收获" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="恋空一译"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>Flex 布局 - 恋空一译</title>
+
+    <!-- Tachyons Core CSS -->
+    <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+
+<body>
+
+<!-- Main Content -->
+<!-- Banner -->
+<!-- Banner -->
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+    
+    <nav class="db dt-l w-100 mw8 center border-box pv3">
+        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="恋空一译">
+            <img src="/images/avatar.jpg" class="dib h3" alt="恋空一译">
+        </a>
+        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/" 
+                    title="Home">
+                    Home
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/archives" 
+                    title="Archives">
+                    Archives
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/tags" 
+                    title="Tags">
+                    Tags
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/categories" 
+                    title="Categories">
+                    Categories
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/about.html" 
+                    title="About">
+                    About
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/contact.html" 
+                    title="Contact">
+                    Contact
+                </a>
+            
+        </div>
+    </nav>
+
+    <!-- Title -->
+    <div class="w-100 mw8 center vh-40 dt">
+        <div class="dtc v-mid white">
+            <h1 class="f1-l f2-m tc tc-m tl-ns">Flex 布局</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2018-10-21</p>
+        </div>
+    </div>
+
+    <!-- Icon -->
+    <div class="relative w-100 mw8 center white dn dn-m db-ns">
+        <i class="header-icon fa fa-file-text-o"></i>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/css/">#css</a> <a class="fw3 ph1 dib" href="/tags/flex/">#flex</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <h2 id="容器的属性"><a href="#容器的属性" class="headerlink" title="容器的属性"></a>容器的属性</h2><ul>
+<li><code>flex-direction</code>属性决定主轴的方向（即项目的排列方向）</li>
+<li><code>flex-wrap</code>属性定义，如果一条轴线排不下，如何换行</li>
+<li><code>flex-flow</code>属性是<code>flex-direction</code>属性和<code>flex-wrap</code>属性的简写形式，默认值为<code>row nowrap</code></li>
+<li><code>justify-content</code>属性定义了项目在主轴上的对齐方式</li>
+<li><code>align-items</code>属性定义项目在交叉轴上如何对齐</li>
+<li><code>align-content</code>属性定义了多根轴线（多行）的对齐方式。如果项目只有一根轴线，该属性不起作用</li>
+</ul>
+<h2 id="项目的属性"><a href="#项目的属性" class="headerlink" title="项目的属性"></a>项目的属性</h2><ul>
+<li>order属性定义项目的排列顺序。数值越小，排列越靠前，默认为0</li>
+<li>flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大</li>
+<li>flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小</li>
+<li><code>flex-basis</code>属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小</li>
+<li><code>flex</code>属性是<code>flex-grow</code>, <code>flex-shrink</code> 和 <code>flex-basis</code>的简写，默认值为<code>0 1 auto</code>。后两个属性可选</li>
+<li><code>align-self</code>属性允许单个项目有与其他项目不一样的对齐方式，可覆盖<code>align-items</code>属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch。</li>
+</ul>
+<h2 id="flex-direction属性"><a href="#flex-direction属性" class="headerlink" title="flex-direction属性"></a>flex-direction属性</h2><table>
+<thead>
+<tr>
+<th>row</th>
+<th>row-reverse</th>
+<th>column</th>
+<th>column-reverse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>水平方向(起点在左) &rarr;</td>
+<td>水平方向 &larr;</td>
+<td>垂直方向 &darr;</td>
+<td>垂直方向 &uarr; </td>
+</tr>
+</tbody>
+</table>
+<h2 id="flex-wrap属性"><a href="#flex-wrap属性" class="headerlink" title="flex-wrap属性"></a>flex-wrap属性</h2><table>
+<thead>
+<tr>
+<th>nowrap</th>
+<th>wrap</th>
+<th>wrap-reverse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>不换行</td>
+<td>换行 &darr;</td>
+<td>换行 &uarr;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="justify-content属性"><a href="#justify-content属性" class="headerlink" title="justify-content属性"></a>justify-content属性</h2><table>
+<thead>
+<tr>
+<th>flex-start</th>
+<th>flex-end</th>
+<th>center</th>
+<th>space-between</th>
+<th>space-around</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>左对齐</td>
+<td>右对齐</td>
+<td>居中</td>
+<td>两端对齐，项目之间的间隔都相等</td>
+<td>每个项目两侧的间隔相等</td>
+</tr>
+</tbody>
+</table>
+<h2 id="align-items属性"><a href="#align-items属性" class="headerlink" title="align-items属性"></a>align-items属性</h2><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>flex-start</td>
+<td>交叉轴的起点对齐 </td>
+</tr>
+<tr>
+<td>flex-end</td>
+<td>交叉轴的终点对齐 </td>
+</tr>
+<tr>
+<td>center</td>
+<td>交叉轴的中点对齐 </td>
+</tr>
+<tr>
+<td>baseline</td>
+<td>项目的第一行文字的基线对齐 </td>
+</tr>
+<tr>
+<td>stretch</td>
+<td>如果项目未设置高度或设为auto，将占满整个容器的高度</td>
+</tr>
+</tbody>
+</table>
+<h2 id="align-content属性"><a href="#align-content属性" class="headerlink" title="align-content属性"></a>align-content属性</h2><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>flex-start</td>
+<td>与交叉轴的起点对齐</td>
+</tr>
+<tr>
+<td>flex-end</td>
+<td>与交叉轴的终点对齐</td>
+</tr>
+<tr>
+<td>center</td>
+<td>与交叉轴的中点对齐</td>
+</tr>
+<tr>
+<td>space-between</td>
+<td>与交叉轴两端对齐，轴线之间的间隔平均分布</td>
+</tr>
+<tr>
+<td>space-around</td>
+<td>每根轴线两侧的间隔都相等。轴线之间的间隔比轴线与边框的间隔大一倍</td>
+</tr>
+<tr>
+<td>stretch（默认值）</td>
+<td>轴线占满整个交叉轴</td>
+</tr>
+</tbody>
+</table>
+<h2 id="align-self属性"><a href="#align-self属性" class="headerlink" title="align-self属性"></a>align-self属性</h2><ul>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/align-self" target="_blank" rel="noopener">align-self</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>auto</td>
+<td>设置为父元素的 align-items 值，如果该元素没有父元素的话，就设置为 stretch</td>
+</tr>
+<tr>
+<td>flex-start</td>
+<td>元素会对齐到 cross-axis 的首端</td>
+</tr>
+<tr>
+<td>flex-end</td>
+<td>元素会对齐到 cross-axis 的尾端</td>
+</tr>
+<tr>
+<td>center</td>
+<td>元素会对齐到 cross-axis 的中间，如果该元素的 cross-size 的尺寸大于 flex 容器，将在两个方向均等溢出</td>
+</tr>
+<tr>
+<td>baseline</td>
+<td>所有的 flex 元素会沿着基线对齐</td>
+</tr>
+<tr>
+<td>stretch</td>
+<td>元素将会基于容器的宽和高，按照自身 margin box 的 cross-size 拉伸</td>
+</tr>
+</tbody>
+</table>
+<p>除了auto，其他都与align-items属性完全一致</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><hr>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex</a></p>
+<p><a href="http://static.vgee.cn/static/index.html" target="_blank" rel="noopener">http://static.vgee.cn/static/index.html</a></p>
+<p><a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html</a></p>
+<hr>
+<h2 id="bootstrap3和bootstrap4的区别"><a href="#bootstrap3和bootstrap4的区别" class="headerlink" title="bootstrap3和bootstrap4的区别"></a>bootstrap3和bootstrap4的区别</h2><blockquote>
+<p>bootstrap3和bootstrap4最大的区别就是4用的是flex布局，3用的是float浮动，bootstrap4的栅格类特小(col-)，bootstrap3的栅格类特小(col-xs），bootstrap4新增加的栅格特大(col-xl-)，bootstrap4用offset来移动，bootstrap3用push和pull向左和向右移动</p>
+</blockquote>
+<hr>
+<p>本文来自 weixin_42041193 的CSDN 博客 ，全文地址请点击：<a href="https://blog.csdn.net/weixin_42041193/article/details/81068002?utm_source=copy" target="_blank" rel="noopener">https://blog.csdn.net/weixin_42041193/article/details/81068002?utm_source=copy</a> </p>
+
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/css/">#css</a> <a class="fw3 ph1 dib" href="/tags/flex/">#flex</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+
+
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+            <img src="/images/timg.jpg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="lhz">
+        </div>
+        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
+            My name is lhz  and this is my blog.
+        </div>
+    </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+                        <div class="mt5 tc tl-l">
+    <h3>分类</h3>
+    
+        <p>
+            <a href="/categories/css/">css</a>
+        </p>
+    
+</div>
+
+
+                        <hr class="dn-l mw4 black-50 mt5" />
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>近期文章</h3>
+    
+        <p>
+            <a href="/2019/01/13/todo/">Todo</a>
+        </p>
+    
+        <p>
+            <a href="/2018/12/17/reflow-repaint/">了解回流和重绘</a>
+        </p>
+    
+        <p>
+            <a href="/2018/12/05/common-tool/">常用工具</a>
+        </p>
+    
+        <p>
+            <a href="/2018/11/15/javascript-closure/">闭包</a>
+        </p>
+    
+        <p>
+            <a href="/2018/11/10/html5/">HTML5</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="bg-1 ph2 ph5-ns pv5">
+        <div class="mv8">
+            <div class="center tc">
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://github.com/mrlhz" target="_blank">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </div>
+                
+            </div>
+            <div class="f6 f5-ns center tc white pt5 fw3">
+                @study. All right reserved | Design & <a class="link dim white" href="https://hexo.io/zh-cn/">Hexo</a> <a class="link dim white" href="https://mrlhz.com/">lhz</a>
+            </div>
+        </div>
+    </div>
+
+<!-- After Footer -->
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

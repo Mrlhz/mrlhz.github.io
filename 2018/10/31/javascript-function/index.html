@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="一分耕耘一分收获">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="lhz">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="JavaScript 函数基础"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="一分耕耘一分收获" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="恋空一译"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>JavaScript 函数基础 - 恋空一译</title>
+
+    <!-- Tachyons Core CSS -->
+    <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+
+<body>
+
+<!-- Main Content -->
+<!-- Banner -->
+<!-- Banner -->
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+    
+    <nav class="db dt-l w-100 mw8 center border-box pv3">
+        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="恋空一译">
+            <img src="/images/avatar.jpg" class="dib h3" alt="恋空一译">
+        </a>
+        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/" 
+                    title="Home">
+                    Home
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/archives" 
+                    title="Archives">
+                    Archives
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/tags" 
+                    title="Tags">
+                    Tags
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/categories" 
+                    title="Categories">
+                    Categories
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/about.html" 
+                    title="About">
+                    About
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/contact.html" 
+                    title="Contact">
+                    Contact
+                </a>
+            
+        </div>
+    </nav>
+
+    <!-- Title -->
+    <div class="w-100 mw8 center vh-40 dt">
+        <div class="dtc v-mid white">
+            <h1 class="f1-l f2-m tc tc-m tl-ns">JavaScript 函数基础</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2018-10-31</p>
+        </div>
+    </div>
+
+    <!-- Icon -->
+    <div class="relative w-100 mw8 center white dn dn-m db-ns">
+        <i class="header-icon fa fa-file-text-o"></i>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/JavaScript/">#JavaScript</a> <a class="fw3 ph1 dib" href="/tags/function/">#function</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <h1 id="挥舞函数"><a href="#挥舞函数" class="headerlink" title="挥舞函数"></a>挥舞函数</h1><ul>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function" target="_blank" rel="noopener">Function</a></li>
+<li><a href="https://www.jianshu.com/nb/3301340" target="_blank" rel="noopener">JavaScript 忍者秘籍笔记</a></li>
+<li><a href="https://www.cnblogs.com/koto/p/5781014.html" target="_blank" rel="noopener">JavaScript忍者秘籍——函数（下）</a></li>
+<li><a href="https://www.cnblogs.com/koto/p/5797251.html" target="_blank" rel="noopener">JavaScript忍者秘籍——闭包</a></li>
+</ul>
+<h1 id="JavaScript-标准库-–-Function"><a href="#JavaScript-标准库-–-Function" class="headerlink" title="JavaScript 标准库 – Function"></a>JavaScript 标准库 – Function</h1><h2 id="原型对象-–-方法"><a href="#原型对象-–-方法" class="headerlink" title="原型对象 – 方法"></a>原型对象 – 方法</h2><p><code>Function.prototype.apply()</code></p>
+<blockquote>
+<p>在一个对象的上下文中应用另一个对象的方法；参数能够以数组形式传入。</p>
+</blockquote>
+<p><code>Function.prototype.call()</code></p>
+<blockquote>
+<p>在一个对象的上下文中应用另一个对象的方法；参数能够以列表形式传入。</p>
+</blockquote>
+<p><code>Function.prototype.bind()</code></p>
+<blockquote>
+<p>bind()方法会创建一个新函数,称为绑定函数.当调用这个绑定函数时,绑定函数会以创建它时传入 bind()方法的第一个参数作为 this,传入 bind()方法的第二个以及以后的参数加上绑定函数运行时本身的参数按照顺序作为原函数的参数来调用原函数.</p>
+</blockquote>
+<h2 id="函数表达式"><a href="#函数表达式" class="headerlink" title="函数表达式"></a>函数表达式</h2><ul>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions#例子" target="_blank" rel="noopener">函数声明非常容易（经常是意外地）转换为函数表达式</a></li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions#The_function_expression_.28function_operator.29" target="_blank" rel="noopener">函数表达式不会提升，所以不能在定义之前调用</a><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 函数声明</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数表达式</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span> <span class="title">bar</span>(<span class="params"></span>) </span>&#123;&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数表达式</span></span><br><span class="line">x = <span class="function"><span class="keyword">function</span> <span class="title">hello</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (x) &#123;</span><br><span class="line">   <span class="comment">// 函数表达式</span></span><br><span class="line">   <span class="function"><span class="keyword">function</span> <span class="title">world</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数声明</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">   <span class="comment">// 函数声明</span></span><br><span class="line">   <span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">   <span class="keyword">if</span> (<span class="number">0</span>) &#123;</span><br><span class="line">      <span class="comment">//函数表达式</span></span><br><span class="line">      <span class="function"><span class="keyword">function</span> <span class="title">c</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h2><p><code>4.2.1</code>普通命名函数的中的递归<br>检测回文<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isPalindrome</span>(<span class="params">text</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (text.length &lt;= <span class="number">1</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">  <span class="keyword">if</span> (text.charAt(<span class="number">0</span>) != text.charAt(text.length - <span class="number">1</span>)) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">  <span class="keyword">return</span> isPalindrome(text.substr(<span class="number">1</span>, text.length - <span class="number">2</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>其他实现<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isPalindrome</span>(<span class="params">line</span>) </span>&#123;</span><br><span class="line">  line += <span class="string">""</span>;</span><br><span class="line">  <span class="keyword">return</span> line === line.split(<span class="string">""</span>).reverse().join(<span class="string">""</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 这种方法很方便，但效率不高，字符串分割，倒转，聚合都需要很多额外的操作。</span></span><br><span class="line"><span class="comment">// 最好的方法，是从字符串头部和尾部，逐次向中间检测。</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isPalindrome</span>(<span class="params">line</span>) </span>&#123;</span><br><span class="line">  line += <span class="string">""</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>, j = line.length - <span class="number">1</span>; i &lt; j; i++, j--) &#123;</span><br><span class="line">    <span class="keyword">if</span> (line.charAt(i) !== line.charAt(j)) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><code>4.3.2</code>自记忆函数<br>缓存记忆昂贵的计算结果<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isPrime</span>(<span class="params">value</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (!isPrime.answers) isPrime.answers = &#123;&#125;;                  <span class="comment">//#1</span></span><br><span class="line">  <span class="keyword">if</span> (isPrime.answers[value] != <span class="literal">null</span>) &#123;                        <span class="comment">//#2</span></span><br><span class="line">    <span class="keyword">return</span> isPrime.answers[value];                             <span class="comment">//#2</span></span><br><span class="line">  &#125;                                                            <span class="comment">//#2</span></span><br><span class="line">  <span class="keyword">var</span> prime = value != <span class="number">1</span>; <span class="comment">// 1 can never be prime</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">2</span>; i &lt; value; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (value % i == <span class="number">0</span>) &#123;</span><br><span class="line">      prime = <span class="literal">false</span>;</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> isPrime.answers[value] = prime;                       <span class="comment">//#3</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><code>4.3.3</code>伪造数组方法</p>
+<h1 id="JavaScript-函数基础"><a href="#JavaScript-函数基础" class="headerlink" title="JavaScript 函数基础"></a>JavaScript 函数基础</h1><h2 id="定义方法"><a href="#定义方法" class="headerlink" title="定义方法"></a>定义方法</h2><ul>
+<li>静态方法 <code>function 函数名(){return[函数返回值]}</code></li>
+<li>动态匿名方法 <code>var 函数名 = new Function ([arg]){}</code></li>
+<li>直接量方法 <code>函数名 = new Function ([arg]){函数体}</code><h2 id="调用方法"><a href="#调用方法" class="headerlink" title="调用方法"></a>调用方法</h2></li>
+<li>直接调用</li>
+<li>在链接中调用</li>
+<li>在事件中调用</li>
+<li>递归调用</li>
+</ul>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><h3 id="Function-prototype-apply"><a href="#Function-prototype-apply" class="headerlink" title="Function.prototype.apply()"></a><code>Function.prototype.apply()</code></h3><blockquote>
+<p>func.apply(thisArg, [argsArray]) </p>
+</blockquote>
+<blockquote>
+<p>返回值：调用有指定this值和参数的函数的结果</p>
+</blockquote>
+<blockquote>
+<p>thisArg<br>可选。在非严格模式下，则指定为 null 或 undefined 时会自动替换为指向全局对象（浏览器中就是window对象），同时值为原始值（数字，字符串，布尔值）的 this 会指向该原始值的包装对象。</p>
+</blockquote>
+<blockquote>
+<p>argsArray<br>可选。一个数组或者类数组对象，其中的数组元素将作为单独的参数传给 func 函数。如果该参数的值为null 或 undefined，则表示不需要传入任何参数。从ECMAScript 5 开始可以使用类数组对象。</p>
+</blockquote>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply" target="_blank" rel="noopener">使用apply来链接构造器</a><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Function</span>.prototype.construct = <span class="function"><span class="keyword">function</span> (<span class="params">aArgs</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> oNew = <span class="built_in">Object</span>.create(<span class="keyword">this</span>.prototype);</span><br><span class="line">  <span class="keyword">this</span>.apply(oNew, aArgs);</span><br><span class="line">  <span class="keyword">return</span> oNew;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h3 id="Function-prototype-call"><a href="#Function-prototype-call" class="headerlink" title="Function.prototype.call()"></a><code>Function.prototype.call()</code></h3><blockquote>
+<p><code>fun.call(thisArg, arg1, arg2, ...)</code></p>
+</blockquote>
+<blockquote>
+<p>返回值：返回值是你调用的方法的返回值，若该方法没有返回值，则返回undefined。</p>
+</blockquote>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/call" target="_blank" rel="noopener">示例</a></p>
+<hr>
+<h3 id="Function-prototype-bind"><a href="#Function-prototype-bind" class="headerlink" title="Function.prototype.bind()"></a><code>Function.prototype.bind()</code></h3><blockquote>
+<p>fun.bind(thisArg[, arg1[, arg2[, …]]])</p>
+</blockquote>
+<p>参数</p>
+<p><code>thisArg</code></p>
+<blockquote>
+<p>当绑定函数被调用时，该参数会作为原函数运行时的 this 指向。当使用new 操作符调用绑定函数时，该参数无效。</p>
+</blockquote>
+<p><code>arg1, arg2, ...</code></p>
+<blockquote>
+<p>当绑定函数被调用时，这些参数将置于实参之前传递给被绑定的方法。</p>
+</blockquote>
+<p>返回值</p>
+<blockquote>
+<p> 返回由指定的this值和初始化参数改造的原函数拷贝</p>
+</blockquote>
+<blockquote>
+<p>创建绑定函数<br><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind" target="_blank" rel="noopener">示例</a></p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.x = <span class="number">9</span>; </span><br><span class="line"><span class="keyword">var</span> <span class="built_in">module</span> = &#123;</span><br><span class="line">  x: <span class="number">81</span>,</span><br><span class="line">  getX: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="keyword">return</span> <span class="keyword">this</span>.x; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.getX(); <span class="comment">// 返回 81</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> retrieveX = <span class="built_in">module</span>.getX;</span><br><span class="line">retrieveX(); <span class="comment">// 返回 9, 在这种情况下，"this"指向全局作用域</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建一个新函数，将"this"绑定到module对象</span></span><br><span class="line"><span class="comment">// 新手可能会被全局的x变量和module里的属性x所迷惑</span></span><br><span class="line"><span class="keyword">var</span> boundGetX = retrieveX.bind(<span class="built_in">module</span>);</span><br><span class="line">boundGetX(); <span class="comment">// 返回 81</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>偏函数</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">list</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Array</span>.prototype.slice.call(<span class="built_in">arguments</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> list1 = list(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>); <span class="comment">// [1, 2, 3]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Create a function with a preset leading argument</span></span><br><span class="line"><span class="keyword">var</span> leadingThirtysevenList = list.bind(<span class="literal">undefined</span>, <span class="number">37</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> list2 = leadingThirtysevenList(); <span class="comment">// [37]</span></span><br><span class="line"><span class="keyword">var</span> list3 = leadingThirtysevenList(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>); <span class="comment">// [37, 1, 2, 3]</span></span><br></pre></td></tr></table></figure>
+<h2 id="arguments"><a href="#arguments" class="headerlink" title="arguments"></a>arguments</h2><ul>
+<li>功能：存放实参的参数列表</li>
+<li>特性：1. 仅能在函数体内使用<pre><code>2. 带有下标属性，非数组
+3. 函数声明时自动初始化
+</code></pre></li>
+<li>属性：1. length<pre><code>2. callee(严格模式下,(ES5) 禁止使用)
+3. caller 已被移除
+</code></pre></li>
+</ul>
+<h2 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h2><h3 id="箭头函数有几个使用注意点"><a href="#箭头函数有几个使用注意点" class="headerlink" title="箭头函数有几个使用注意点"></a>箭头函数有几个使用注意点</h3><ol>
+<li><p>函数体内的this对象，就是定义时所在的对象，而不是使用时所在的对象。</p>
+</li>
+<li><p>不可以当作构造函数，也就是说，不可以使用new命令，否则会抛出一个错误。</p>
+</li>
+<li><p>不可以使用arguments对象，该对象在函数体内不存在。如果要用，可以用 rest 参数代替。</p>
+</li>
+<li><p>不可以使用yield命令，因此箭头函数不能用作 Generator 函数。</p>
+</li>
+</ol>
+<blockquote>
+<p>上面四点中，第一点尤其值得注意。this对象的指向是可变的，但是在箭头函数中，它是固定的。</p>
+</blockquote>
+
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/JavaScript/">#JavaScript</a> <a class="fw3 ph1 dib" href="/tags/function/">#function</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+
+
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+            <img src="/images/timg.jpg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="lhz">
+        </div>
+        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
+            My name is lhz  and this is my blog.
+        </div>
+    </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+                        <div class="mt5 tc tl-l">
+    <h3>分类</h3>
+    
+        <p>
+            <a href="/categories/JavaScript/">JavaScript</a>
+        </p>
+    
+</div>
+
+
+                        <hr class="dn-l mw4 black-50 mt5" />
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>近期文章</h3>
+    
+        <p>
+            <a href="/2019/01/13/todo/">Todo</a>
+        </p>
+    
+        <p>
+            <a href="/2018/12/17/reflow-repaint/">了解回流和重绘</a>
+        </p>
+    
+        <p>
+            <a href="/2018/12/05/common-tool/">常用工具</a>
+        </p>
+    
+        <p>
+            <a href="/2018/11/15/javascript-closure/">闭包</a>
+        </p>
+    
+        <p>
+            <a href="/2018/11/10/html5/">HTML5</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="bg-1 ph2 ph5-ns pv5">
+        <div class="mv8">
+            <div class="center tc">
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://github.com/mrlhz" target="_blank">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </div>
+                
+            </div>
+            <div class="f6 f5-ns center tc white pt5 fw3">
+                @study. All right reserved | Design & <a class="link dim white" href="https://hexo.io/zh-cn/">Hexo</a> <a class="link dim white" href="https://mrlhz.com/">lhz</a>
+            </div>
+        </div>
+    </div>
+
+<!-- After Footer -->
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="一分耕耘一分收获">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="lhz">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="JavaScript RegExp 对象"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="一分耕耘一分收获" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="恋空一译"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>JavaScript RegExp 对象 - 恋空一译</title>
+
+    <!-- Tachyons Core CSS -->
+    <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+
+<body>
+
+<!-- Main Content -->
+<!-- Banner -->
+<!-- Banner -->
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+    
+    <nav class="db dt-l w-100 mw8 center border-box pv3">
+        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="恋空一译">
+            <img src="/images/avatar.jpg" class="dib h3" alt="恋空一译">
+        </a>
+        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/" 
+                    title="Home">
+                    Home
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/archives" 
+                    title="Archives">
+                    Archives
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/tags" 
+                    title="Tags">
+                    Tags
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/categories" 
+                    title="Categories">
+                    Categories
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/about.html" 
+                    title="About">
+                    About
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/contact.html" 
+                    title="Contact">
+                    Contact
+                </a>
+            
+        </div>
+    </nav>
+
+    <!-- Title -->
+    <div class="w-100 mw8 center vh-40 dt">
+        <div class="dtc v-mid white">
+            <h1 class="f1-l f2-m tc tc-m tl-ns">JavaScript RegExp 对象</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2018-10-29</p>
+        </div>
+    </div>
+
+    <!-- Icon -->
+    <div class="relative w-100 mw8 center white dn dn-m db-ns">
+        <i class="header-icon fa fa-file-text-o"></i>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/JavaScript/">#JavaScript</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <h1 id="JavaScript-RegExp-对象"><a href="#JavaScript-RegExp-对象" class="headerlink" title="JavaScript RegExp 对象"></a>JavaScript RegExp 对象</h1><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="http://louiszhai.github.io/2016/06/13/regexp/" target="_blank" rel="noopener">正则表达式前端使用手册</a></li>
+<li><a href="http://www.runoob.com/jsref/jsref-obj-regexp.html" target="_blank" rel="noopener">JavaScript RegExp 对象</a></li>
+<li><a href="https://juejin.im/post/5bda4e6fe51d45681f245274" target="_blank" rel="noopener">一次性搞懂JavaScript正则表达式之语法</a></li>
+<li><a href="https://c.runoob.com/" target="_blank" rel="noopener">菜鸟在线工具</a></li>
+</ul>
+<h2 id="方括号"><a href="#方括号" class="headerlink" title="方括号"></a>方括号</h2><table>
+<thead>
+<tr>
+<th>表达式</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[abc]</td>
+<td>查找方括号之间的任何字符</td>
+</tr>
+<tr>
+<td>[^abc]</td>
+<td>查找任何不在方括号之间的字符</td>
+</tr>
+<tr>
+<td>[0-9]</td>
+<td>查找任何从 0 至 9 的数字</td>
+</tr>
+<tr>
+<td>[a-z]</td>
+<td>查找任何从小写 a 到小写 z 的字符</td>
+</tr>
+<tr>
+<td>[A-Z]</td>
+<td>查找任何从大写 A 到大写 Z 的字符</td>
+</tr>
+<tr>
+<td>[A-z]</td>
+<td>查找任何从大写 A 到小写 z 的字符</td>
+</tr>
+<tr>
+<td>[adgk]</td>
+<td>查找给定集合内的任何字符</td>
+</tr>
+<tr>
+<td>[^adgk]</td>
+<td>查找给定集合外的任何字符</td>
+</tr>
+<tr>
+<td>(red\blue\green)</td>
+<td>查找任何指定的选项</td>
+</tr>
+</tbody>
+</table>
+<h2 id="元字符"><a href="#元字符" class="headerlink" title="元字符"></a>元字符</h2><table>
+<thead>
+<tr>
+<th>元字符</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.</td>
+<td>查找单个字符，除了换行和行结束符</td>
+</tr>
+<tr>
+<td>\w</td>
+<td>查找单词字符</td>
+</tr>
+<tr>
+<td>\W</td>
+<td>查找非单词字符</td>
+</tr>
+<tr>
+<td>\d</td>
+<td>查找数字</td>
+</tr>
+<tr>
+<td>\D</td>
+<td>查找非数字字符</td>
+</tr>
+<tr>
+<td>\s</td>
+<td>查找空白字符</td>
+</tr>
+<tr>
+<td>\S</td>
+<td>查找非空白字符</td>
+</tr>
+<tr>
+<td>\b</td>
+<td>匹配单词边界</td>
+</tr>
+<tr>
+<td>\B</td>
+<td>匹配非单词边界</td>
+</tr>
+<tr>
+<td>\0</td>
+<td>查找 NULL 字符</td>
+</tr>
+<tr>
+<td>\n</td>
+<td>查找换行符</td>
+</tr>
+<tr>
+<td>\f</td>
+<td>查找换页符</td>
+</tr>
+<tr>
+<td>\r</td>
+<td>查找回车符</td>
+</tr>
+<tr>
+<td>\t</td>
+<td>查找制表符</td>
+</tr>
+<tr>
+<td>\v</td>
+<td>查找垂直制表符</td>
+</tr>
+<tr>
+<td>\xxx</td>
+<td>查找以八进制数 xxx 规定的字符</td>
+</tr>
+<tr>
+<td>\xdd</td>
+<td>查找以十六进制数 dd 规定的字符</td>
+</tr>
+<tr>
+<td>\uxxxx</td>
+<td>查找以十六进制数 xxxx 规定的 Unicode 字符</td>
+</tr>
+</tbody>
+</table>
+<h2 id="量词"><a href="#量词" class="headerlink" title="量词"></a>量词</h2><table>
+<thead>
+<tr>
+<th>量词</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[n+]</td>
+<td>匹配任何包含至少一个 n 的字符串</td>
+</tr>
+<tr>
+<td>n*</td>
+<td>匹配任何包含零个或多个 n 的字符串</td>
+</tr>
+<tr>
+<td>n?</td>
+<td>匹配任何包含零个或一个 n 的字符串</td>
+</tr>
+<tr>
+<td>n{X}</td>
+<td>匹配包含 X 个 n 的序列的字符串</td>
+</tr>
+<tr>
+<td>n{X,}</td>
+<td>X 是一个正整数前面的模式 n 连续出现至少 X 次时匹配</td>
+</tr>
+<tr>
+<td>n{X,Y}</td>
+<td>X 和 Y 为正整数前面的模式 n 连续出现至少 X 次，至多 Y 次时匹配</td>
+</tr>
+<tr>
+<td>n$</td>
+<td>匹配任何结尾为 n 的字符串</td>
+</tr>
+<tr>
+<td>^n</td>
+<td>匹配任何开头为 n 的字符串</td>
+</tr>
+<tr>
+<td>?=n</td>
+<td>匹配任何其后紧接指定字符串 n 的字符串</td>
+</tr>
+<tr>
+<td>?!n</td>
+<td>匹配任何其后没有紧接指定字符串 n 的字符串</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>限定符</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>*</td>
+<td>x&gt;=0</td>
+</tr>
+<tr>
+<td>+</td>
+<td>x&gt;=1</td>
+</tr>
+<tr>
+<td>?</td>
+<td>x=0 or x=1</td>
+</tr>
+<tr>
+<td>{n}</td>
+<td>x=n</td>
+</tr>
+<tr>
+<td>{n,}</td>
+<td>x&gt;=n</td>
+</tr>
+<tr>
+<td>{n,m}</td>
+<td>n&lt;=x&lt;=m</td>
+</tr>
+</tbody>
+</table>
+<p><code>n+</code></p>
+<blockquote>
+<p>例如，/a+/ 匹配 “candy” 中的 “a”，”caaaaaaandy” 中所有的 “a”</p>
+</blockquote>
+<p><code>n*</code></p>
+<blockquote>
+<p>例如，/bo*/ 匹配 “A ghost booooed” 中的 “boooo”，”A bird warbled” 中的 “b”，但是不匹配 “A goat grunted”</p>
+</blockquote>
+<p>n?</p>
+<blockquote>
+<p>例如，/e?le?/ 匹配 “angel” 中的 “el”，”angle” 中的 “le”</p>
+</blockquote>
+<p>n{X}</p>
+<blockquote>
+<p>匹配包含 X 个 n 的序列的字符串;例如，/a{2}/ 不匹配 “candy,” 中的 “a”，但是匹配 “caandy,” 中的两个 “a”，且匹配 “caaandy.” 中的前两个 “a”</p>
+</blockquote>
+<p>n{X,}</p>
+<blockquote>
+<p>例如，/a{2,}/ 不匹配 “candy” 中的 “a”，但是匹配 “caandy” 和 “caaaaaaandy.” 中所有的 “a”</p>
+</blockquote>
+<p>n{X,Y}</p>
+<blockquote>
+<p>例如，/a{1,3}/ 不匹配 “cndy”，匹配 “candy,” 中的 “a”，”caandy,” 中的两个 “a”，匹配 “caaaaaaandy” 中的前面三个 “a”注意，当匹配 “caaaaaaandy” 时，即使原始字符串拥有更多的 “a”，匹配项也是 “aaa”</p>
+</blockquote>
+<p><code>n$</code></p>
+<blockquote>
+<p>匹配任何结尾为 n 的字符串<br><code>^n</code><br>匹配任何开头为 n 的字符串<br><code>?=n</code><br>匹配任何其后紧接指定字符串 n 的字符串<br><code>?!n</code><br>匹配任何其后没有紧接指定字符串 n 的字符串</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+<th>FF</th>
+<th>IE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>search</td>
+<td>检索与正则表达式相匹配的值</td>
+<td>1</td>
+<td>4</td>
+</tr>
+<tr>
+<td>match</td>
+<td>找到一个或多个正则表达式的匹配</td>
+<td>1</td>
+<td>4</td>
+</tr>
+<tr>
+<td>replace</td>
+<td>替换与正则表达式匹配的子串</td>
+<td>1</td>
+<td>4</td>
+</tr>
+<tr>
+<td>split</td>
+<td>把字符串分割为字符串数组</td>
+<td>1</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> reg = <span class="regexp">/http: (\/\/.+.jpg)/</span>;</span><br><span class="line"><span class="keyword">let</span> img1 = <span class="string">'http: //img.hb.aicdn.com/bdad4f7788d7b3366c9f40406917848fa67bc7362bfa0-xLVh5p_fw658.jpg'</span></span><br><span class="line"><span class="keyword">let</span> img2 = <span class="string">'//img.hb.aicdn.com/4bfebd327513d3a20fbe51b591a763b8e901d776679ed-lPKjKd_fw658.jpg'</span></span><br><span class="line"><span class="keyword">let</span> str = img1.replace(reg, <span class="string">'$1'</span>)</span><br><span class="line"><span class="built_in">console</span>.log(str)</span><br><span class="line"><span class="keyword">let</span> date = <span class="string">'2018/10/30'</span></span><br><span class="line"><span class="keyword">let</span> pattern = <span class="regexp">/^(\d&#123;4&#125;)[/-](\d&#123;2&#125;)[/-](\d&#123;2&#125;)$/</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">  \d&#123;4&#125; 连续4个数字</span></span><br><span class="line"><span class="comment">  [/-]   / 或者 - </span></span><br><span class="line"><span class="comment">  (\d&#123;4&#125;) 加个括号提取出来 用$1表示</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">date.match(pattern) </span><br><span class="line"><span class="comment">// ["2018/10/30", "2018", "10", "30", index: 0, input: "2018/10/30", groups: undefined]</span></span><br><span class="line"><span class="built_in">RegExp</span>.$<span class="number">1</span> <span class="comment">// "2018"</span></span><br><span class="line"><span class="keyword">let</span> after = date.replace(pattern, <span class="string">'$1-$2-$3'</span>)</span><br><span class="line"><span class="built_in">console</span>.log(after)</span><br></pre></td></tr></table></figure>
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/JavaScript/">#JavaScript</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+
+
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+            <img src="/images/timg.jpg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="lhz">
+        </div>
+        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
+            My name is lhz  and this is my blog.
+        </div>
+    </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+                        <div class="mt5 tc tl-l">
+    <h3>分类</h3>
+    
+        <p>
+            <a href="/categories/JavaScript/">JavaScript</a>
+        </p>
+    
+</div>
+
+
+                        <hr class="dn-l mw4 black-50 mt5" />
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>近期文章</h3>
+    
+        <p>
+            <a href="/2019/01/13/todo/">Todo</a>
+        </p>
+    
+        <p>
+            <a href="/2018/12/17/reflow-repaint/">了解回流和重绘</a>
+        </p>
+    
+        <p>
+            <a href="/2018/12/05/common-tool/">常用工具</a>
+        </p>
+    
+        <p>
+            <a href="/2018/11/15/javascript-closure/">闭包</a>
+        </p>
+    
+        <p>
+            <a href="/2018/11/10/html5/">HTML5</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="bg-1 ph2 ph5-ns pv5">
+        <div class="mv8">
+            <div class="center tc">
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://github.com/mrlhz" target="_blank">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </div>
+                
+            </div>
+            <div class="f6 f5-ns center tc white pt5 fw3">
+                @study. All right reserved | Design & <a class="link dim white" href="https://hexo.io/zh-cn/">Hexo</a> <a class="link dim white" href="https://mrlhz.com/">lhz</a>
+            </div>
+        </div>
+    </div>
+
+<!-- After Footer -->
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
